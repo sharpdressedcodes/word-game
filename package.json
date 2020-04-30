@@ -1,0 +1,101 @@
+{
+    "name": "word-game",
+    "version": "1.0.0",
+    "description": "A basic word game",
+    "license": "UNLICENSED",
+    "contributors": [
+        {
+            "name": "Greg Kappatos",
+            "email": "sharpdressedcodes@users.noreply.github.com"
+        }
+    ],
+    "engines": {
+        "node": ">=10.16.3",
+        "npm": ">=6.9.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sharpdressedcodes/word-game.git"
+    },
+    "postcss": {
+        "plugins": {
+            "autoprefixer": {}
+        }
+    },
+    "browserslist": [
+        "last 2 versions",
+        "ie >= 10",
+        "ios >= 9",
+        "Android >= 4"
+    ],
+    "scripts": {
+        "start:dev": "cross-env NODE_ENV=development node ./dist/server.js",
+        "start": "cross-env NODE_ENV=production node ./dist/server.js",
+        "clean": "rimraf ./dist/bundle.* ./dist/server.js",
+        "build:dev": "npm run clean && cross-env NODE_ENV=development webpack --bail --hide-modules --progress --mode development",
+        "build": "npm run clean && cross-env NODE_ENV=production webpack --bail --hide-modules --progress --mode production",
+        "lint:js": "eslint --fix --ext .js ./src/**/*.js",
+        "lint:scss": "sass-lint-auto-fix --config .sass-lint.yml ./src/browser/**/*.scss",
+        "lint": "npm run lint:js && npm run lint:scss",
+        "test": "jest ./tests/unit -u",
+        "test:watch": "jest ./tests/unit -u --watch"
+    },
+    "dependencies": {
+        "@babel/polyfill": "^7.6.0",
+        "async": "^3.2.0",
+        "axios": "^0.19.2",
+        "axios-cache-plugin": "^0.1.0",
+        "body-parser": "^1.19.0",
+        "classnames": "^2.2.6",
+        "cookie-parser": "^1.4.4",
+        "cors": "^2.8.5",
+        "csurf": "^1.10.0",
+        "express": "^4.17.1",
+        "keymirror": "^0.1.1",
+        "lodash.get": "^4.4.2",
+        "memoize-one": "^5.1.1",
+        "moment": "^2.24.0",
+        "mkdirp": "^1.0.4",
+        "sanitize": "^2.1.0",
+        "sanitize-html": "^1.23.0"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.6.2",
+        "@babel/core": "^7.5.5",
+        "@babel/plugin-proposal-class-properties": "^7.5.5",
+        "@babel/plugin-proposal-decorators": "^7.4.4",
+        "@babel/plugin-transform-runtime": "^7.6.2",
+        "@babel/preset-env": "^7.5.5",
+        "@babel/register": "^7.6.2",
+        "autoprefixer": "^9.6.1",
+        "babel-eslint": "^10.0.2",
+        "babel-jest": "^24.9.0",
+        "babel-loader": "^8.0.6",
+        "cross-env": "^7.0.2",
+        "css-loader": "^3.1.0",
+        "eslint": "^5.16.0",
+        "eslint-config-airbnb": "^17.1.1",
+        "eslint-plugin-babel": "^5.3.0",
+        "eslint-plugin-import": "^2.18.2",
+        "eslint-plugin-jsx-a11y": "^6.2.3",
+        "eslint-plugin-react": "^7.14.3",
+        "file-loader": "^4.1.0",
+        "jest": "^24.8.0",
+        "mini-css-extract-plugin": "^0.8.0",
+        "node-sass": "^4.12.0",
+        "normalize.css": "^8.0.1",
+        "npm-run-all": "^4.1.5",
+        "postcss-cli": "^6.1.3",
+        "postcss-loader": "^3.0.0",
+        "resolve-url-loader": "^3.1.0",
+        "rimraf": "^2.6.3",
+        "sass-lint": "^1.13.1",
+        "sass-lint-auto-fix": "^0.21.0",
+        "sass-loader": "^7.1.0",
+        "uglifyjs-webpack-plugin": "^2.1.3",
+        "url-loader": "^2.1.0",
+        "webpack": "^4.38.0",
+        "webpack-cli": "^3.3.6",
+        "webpack-node-externals": "^1.7.2"
+    }
+}

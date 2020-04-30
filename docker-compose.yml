@@ -1,0 +1,22 @@
+version: '3.4'
+
+networks:
+  custom:
+    driver: bridge
+
+services:
+  node:
+    #image: 'node:10.16.3-alpine'
+    build:
+      context: ./docker/node
+      dockerfile: Dockerfile
+    container_name: node
+    volumes:
+      - ./:/home/node/app
+    networks:
+      - custom
+    ports:
+      - '3001:3001'
+    restart: unless-stopped
+    tty: 'true'
+    working_dir: /home/node/app

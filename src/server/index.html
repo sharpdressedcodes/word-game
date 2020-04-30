@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no">
+    <title>Word Game</title>
+    <link rel="stylesheet" media="screen" type="text/css" href="/bundle.css">
+</head>
+<body>
+<div id="app">
+    <section class="stage stage--0">
+        <form action="index.html" method="get">
+            <section class="form__fields">
+                <div class="form__field">
+                    <label class="form__label" for="game-words">Words</label>
+                    <div class="form__input-container">
+                        <input id="game-words" name="game-words" type="text" class="form__input" />
+                        <div class="form__field-hint">Comma separated values</div>
+                    </div>
+                </div>
+                <div class="form__field">
+                    <label class="form__label" for="game-players">Players</label>
+                    <select class="form__select" id="game-players" name="game-players">
+                        <option value="2" selected>2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+            </section>
+            <section class="buttons form__buttons">
+                <button class="button" type="submit">Start</button>
+            </section>
+        </form>
+    </section>
+    <section class="stage stage--1" style="display: none;">
+        <header class="heading">
+            <span class="heading__label">Player</span>
+            <span class="heading__value">1</span>
+        </header>
+        <div class="timer">
+            <span>&nbsp;</span>
+        </div>
+        <form action="index.html" method="get">
+            <section class="form__fields">
+                <div class="form__field">
+                    <label class="form__label" for="player-words">Words</label>
+                    <div class="form__input-container">
+                        <input id="player-words" name="player-words" type="text" class="form__input" />
+                        <div class="form__field-hint">Comma separated values (Max 5)</div>
+                    </div>
+                </div>
+            </section>
+            <section class="buttons form__buttons">
+                <button class="button" type="submit">Play</button>
+            </section>
+        </form>
+    </section>
+    <section class="stage stage--2" style="display: none;">
+        <header class="heading">
+            <span class="heading__label">Winners: </span>
+            <span class="heading__value">1, 2</span>
+        </header>
+        <section class="buttons">
+            <button class="button" type="button">Restart</button>
+        </section>
+    </section>
+</div>
+<script charset="utf-8" src="/bundle.js" defer></script>
+</body>
+</html>

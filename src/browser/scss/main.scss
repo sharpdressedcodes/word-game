@@ -1,0 +1,82 @@
+$grey: #ccc;
+
+@keyframes flash {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.flashing {
+    animation: flash 1s infinite;
+}
+
+#app {
+    margin-top: 30px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    font-weight: bold;
+    padding: 5px 10px;
+    text-transform: uppercase;
+}
+
+.stage {
+    border: 1px solid $grey;
+    border-radius: 5px;
+    margin: 0 auto;
+    max-width: 320px;
+    padding: 20px;
+    width: 100%;
+
+    .heading {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    .timer {
+        color: red;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .form {
+        &__fields {
+            margin-bottom: 20px;
+        }
+
+        &__field {
+            &:not(:first-child) {
+                margin-top: 15px;
+            }
+
+            &-hint {
+                color: $grey;
+                font-size: 0.8em;
+                margin-top: 2px;
+            }
+        }
+
+        &__label,
+        &__input,
+        &__select {
+            display: block;
+        }
+
+        &__label {
+            margin-bottom: 3px;
+        }
+
+        &__input {
+            width: 100%;
+        }
+    }
+}

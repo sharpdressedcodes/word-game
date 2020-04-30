@@ -1,0 +1,4 @@
+package-lock.json -diff
+src/public/bundle.css -diff
+src/public/bundle.js -diff
+src/public/fonts/* -diff
