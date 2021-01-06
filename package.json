@@ -43,7 +43,7 @@
     "dependencies": {
         "@babel/polyfill": "^7.6.0",
         "async": "^3.2.0",
-        "axios": "^0.19.2",
+        "axios": "^0.21.1",
         "axios-cache-plugin": "^0.1.0",
         "body-parser": "^1.19.0",
         "classnames": "^2.2.6",
